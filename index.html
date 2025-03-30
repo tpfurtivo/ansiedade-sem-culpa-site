@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansiedade Sem Culpa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffdf8;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #2e7d32;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .mockup {
+      max-width: 300px;
+      display: block;
+      margin: 30px auto;
+    }
+    .botao-comprar {
+      background-color: #388e3c;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    iframe {
+      max-width: 100%;
+      height: 400px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ansiedade Sem Culpa</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#video">VSL</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#comprar">Comprar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Você não está sozinho</h2>
+    <p>Já sentiu seu coração acelerar sem motivo? Já fingiu estar bem enquanto lutava por dentro? <strong>"Ansiedade Sem Culpa"</strong> não é apenas um livro — é um guia para você retomar o controle da sua mente e emoções, sem se sentir fraco, sem se culpar.</p>
+    <p>Este livro revela um caminho claro, acessível e libertador para quem quer viver com mais leveza e autenticidade.</p>
+    <img src="mockup-ansiedade.png" alt="Capa do livro Ansiedade Sem Culpa" class="mockup">
+  </section>
+
+  <section id="beneficios">
+    <h2>O que você vai encontrar no livro</h2>
+    <ul>
+      <li>Soluções naturais e acessíveis para lidar com a ansiedade</li>
+      <li>Técnicas simples para usar no dia a dia</li>
+      <li>Resgate da autoestima e autocompaixão</li>
+      <li>Libertação da culpa e compreensão emocional</li>
+    </ul>
+  </section>
+
+  <section id="video">
+    <h2>Assista ao Vídeo</h2>
+    <iframe src="https://www.youtube.com/embed/0LrNY3p_Z4A" title="VSL sobre ansiedade" allowfullscreen></iframe>
+  </section>
+
+  <section id="depoimentos">
+    <h2>O que dizem sobre o livro</h2>
+    <p>"Nunca pensei que soluções tão simples pudessem me ajudar tanto." - Ana Clara</p>
+    <p>"Me senti acolhida em cada página. Obrigada por esse presente." - Júlia M.</p>
+    <p>"A leitura mudou minha forma de enxergar a ansiedade. Recomendo demais!" - Carlos T.</p>
+  </section>
+
+  <section id="comprar">
+    <h2>Adquira o seu exemplar</h2>
+    <p>Oferta especial por tempo limitado!</p>
+    <a href="#" class="botao-comprar">Comprar Agora</a>
+  </section>
+
+  <section id="contato">
+    <h2>Fale com a gente</h2>
+    <form action="https://formspree.io/f/myzezjvr" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
