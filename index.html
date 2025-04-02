@@ -306,6 +306,14 @@
     }
     atualizarContador();
   });
+  const video = document.getElementById('vsl-video');
+  document.body.addEventListener('click', function enableAudio() {
+    if (video.muted) {
+      video.muted = false;
+      video.play();
+      document.body.removeEventListener('click', enableAudio);
+    }
+  });
 </script>
 <style>
   @media (max-width: 768px) {
