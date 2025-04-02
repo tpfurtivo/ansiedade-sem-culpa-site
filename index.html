@@ -306,5 +306,24 @@
     atualizarContador();
   });
 </script>
+<style>
+  @media (max-width: 768px) {
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #388e3c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      animation: piscar 1.2s infinite;
+      text-decoration: none;
+    }
+  }
+</style>
+<a href="#comprar" class="botao-flutuante">Comprar Agora</a>
 </body>
 </html>
