@@ -67,8 +67,8 @@
       font-size: 20px;
       border-radius: 8px;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 30px;
+      display: block;
+      margin: 30px auto 0 auto;
       animation: piscar 1.5s infinite;
     }
     @keyframes piscar {
@@ -89,11 +89,27 @@
       animation: piscar 1.5s infinite;
       z-index: 1000;
     }
-    .urgencia, .garantia {
+    .urgencia {
       margin-top: 30px;
       font-size: 18px;
       color: #d32f2f;
       font-weight: bold;
+    }
+    .selos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .selo {
+      text-align: center;
+      font-size: 16px;
+    }
+    .selo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
     footer {
       margin-top: 50px;
@@ -147,8 +163,19 @@
       <li>“O livro mudou minha forma de ver a ansiedade. Leve e profundo.” — Marcos Oliveira, Itaipu/RJ</li>
     </ul>
 
-    <div class="garantia">
-      ✔️ 7 Dias de Garantia | ✔️ Pagamento Seguro | ✔️ Acesso Imediato
+    <div class="selos">
+      <div class="selo">
+        <img src="selo-garantia.png" alt="Garantia 7 Dias">
+        <div>7 Dias de Garantia</div>
+      </div>
+      <div class="selo">
+        <img src="selo-pagamento.png" alt="Pagamento Seguro">
+        <div>Pagamento Seguro</div>
+      </div>
+      <div class="selo">
+        <img src="selo-acesso.png" alt="Acesso Imediato">
+        <div>Acesso Imediato</div>
+      </div>
     </div>
 
     <footer>
