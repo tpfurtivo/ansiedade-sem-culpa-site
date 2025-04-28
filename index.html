@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansiedade Sem Culpa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -79,6 +80,20 @@
       margin: 30px auto 0;
       animation: piscar 1.5s infinite;
     }
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 20px;
+      font-size: 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: piscar 1.5s infinite;
+      z-index: 999;
+    }
     @keyframes piscar {
       0%, 100% {opacity: 1;}
       50% {opacity: 0.5;}
@@ -151,6 +166,24 @@
         <p class="cidade">Itaipu/RJ</p>
         <p>“O livro mudou minha forma de ver a ansiedade. Leve e profundo.”</p>
       </div>
+      <div class="card-depoimento">
+        <img src="https://i.imgur.com/8Km9tLL.png" alt="Pedro Almeida">
+        <h3>Pedro Almeida</h3>
+        <p class="cidade">Petrópolis/RJ</p>
+        <p>“Entendi que não preciso carregar o mundo nas costas. Transformador!”</p>
+      </div>
+      <div class="card-depoimento">
+        <img src="https://i.imgur.com/5cKZ0kS.png" alt="Larissa Souza">
+        <h3>Larissa Souza</h3>
+        <p class="cidade">Teresópolis/RJ</p>
+        <p>“Me ajudou a entender que sentir medo é normal e que há solução.”</p>
+      </div>
+      <div class="card-depoimento">
+        <img src="https://i.imgur.com/1Q9Z1Zm.png" alt="Rafael Martins">
+        <h3>Rafael Martins</h3>
+        <p class="cidade">Cabo Frio/RJ</p>
+        <p>“Hoje sou mais leve comigo mesmo. Esse livro abriu meus olhos!”</p>
+      </div>
     </div>
 
     <div class="selos">
@@ -166,10 +199,12 @@
     </div>
 
     <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar">Quero garantir minha cópia!</a>
-
-    <footer>
-      &copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados.
-    </footer>
   </div>
+
+  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-flutuante"><i class="fas fa-shopping-cart"></i> Comprar Agora</a>
+
+  <footer>
+    &copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
