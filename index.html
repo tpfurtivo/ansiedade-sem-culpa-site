@@ -4,356 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansiedade Sem Culpa</title>
+
+  <!-- Pixel Meta -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+  </noscript>
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8f5;
       margin: 0;
       padding: 0;
-      background-color: #fff4e8;
       color: #333;
-      scroll-behavior: smooth;
     }
-    header {
-      background: linear-gradient(90deg, #388e3c, #2e7d32);
-      padding: 20px 0;
+    .container {
       text-align: center;
-      color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav ul li a:hover {
-      color: #c8e6c9;
-    }
-    section {
-  padding: 40px 20px;
-      max-width: 1000px;
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    h2 {
-  color: #2e7d32;
-  margin-bottom: 10px;
-      font-size: 28px;
+    h1, h2 {
+      color: #2e7d32;
     }
-    ul {
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-      line-height: 1.6;
+    p.subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
     }
     .mockup {
-      max-width: 320px;
-      display: block;
-      margin: 40px auto;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 20px auto;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    ul.beneficios, .depoimentos {
+      text-align: left;
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    ul.beneficios li, .depoimentos li {
+      margin-bottom: 12px;
     }
     .botao-comprar {
-      background-color: #388e3c;
-      color: white;
-      padding: 15px 40px;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-    }
-    .botao-comprar:hover {
       background-color: #2e7d32;
-    }
-    form input, form textarea, form button {
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 8px;
+      text-decoration: none;
       display: block;
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 12px;
+      margin: 30px auto 0 auto;
+      animation: piscar 1.5s infinite;
+    }
+    @keyframes piscar {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.5;}
+    }
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: piscar 1.5s infinite;
+      z-index: 1000;
+    }
+    .urgencia {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #d32f2f;
+      font-weight: bold;
+    }
+    .selos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .selo {
+      text-align: center;
       font-size: 16px;
     }
-    form textarea {
-      resize: vertical;
-      min-height: 120px;
+    .selo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
     footer {
-      text-align: center;
-      background-color: #2e7d32;
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
     }
     iframe {
       width: 100%;
       height: 400px;
       border: none;
+      margin-top: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-      .contador {
-      font-size: 32px;
-      color: red;
-      font-weight: bold;
-      text-align: center;
-      animation: piscar 1s infinite;
-    }
-    @keyframes piscar {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
-    }
-    @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '687595697016873');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=687595697016873&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  </style>
 
 </head>
 
 <body>
-  <header>
+  <div class="container">
+    <h1>Parabéns! Você está a um passo de viver com mais leveza.</h1>
+    <p class="subtitle">Transforme sua relação com a ansiedade começando hoje.</p>
 
-    <h1 style="font-size: 40px; font-weight: 800; letter-spacing: 1px; margin: 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.15); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Ansiedade Sem Culpa</h1>
-    <nav>
-      <ul style="list-style: none; padding-left: 0;">
-    <li style="margin-bottom: 10px;"><a href="#sobre">Sobre</a></li>
-    <li style="margin-bottom: 10px;"><a href="#beneficios">Benefícios</a></li>
-        <li><a href="#video">Vídeo</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#comprar">Comprar</a></li>
-        <li><a href="#contato">Contato</a></li>
-  </ul>
-    </nav>
-  </header>
+    <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
 
-  <section id="sobre">
-  <h2>Você não está sozinho</h2>
-  <p>Você já tentou esconder sua ansiedade atrás de um sorriso? Já se culpou por não conseguir simplesmente "ficar bem"? O livro <strong>"Ansiedade Sem Culpa"</strong> vai te mostrar que você não é fraco, e que existe uma saída verdadeira — sem fórmulas mágicas, mas com clareza, acolhimento e transformação real.</p>
-  <p>Com uma linguagem acessível e um passo a passo prático, você vai aprender a reconhecer seus gatilhos, lidar com crises e recuperar a leveza da sua rotina. Ao terminar a leitura, você vai se sentir mais confiante, calmo e no controle. A oportunidade de viver com mais paz começa aqui.</p>
-  
-</section>
+    <h2>Você não está sozinho</h2>
+    <p>Você já tentou esconder sua ansiedade atrás de um sorriso? Já se culpou por não conseguir simplesmente "ficar bem"? O livro "Ansiedade Sem Culpa" vai te mostrar que você não é fraco, e que existe uma saída verdadeira — sem fórmulas mágicas, mas com clareza, acolhimento e transformação real.</p>
+    <p>Com uma linguagem acessível e um passo a passo prático, você vai aprender a reconhecer seus gatilhos, lidar com crises e recuperar a leveza da sua rotina. Ao terminar a leitura, você vai se sentir mais confiante, calmo e no controle. A oportunidade de viver com mais paz começa aqui.</p>
 
-  <section id="video">
-  <h2>Assista ao Vídeo</h2>
-  <video id="vsl-video" autoplay muted playsinline controls style="max-width: 700px; width: 100%; height: auto; display: block; margin: auto; border-radius:12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <source src="video.mp4" type="video/mp4">
-    Seu navegador não suporta a reprodução de vídeo.
-  </video>
-  <div style="background-color: #ff5252; color: white; text-align: center; padding: 12px; font-size: 20px; font-weight: bold; animation: piscar 1s infinite; border-radius: 8px; margin: 30px auto 0; max-width: 600px;">
-    ⚠️ Clique no botão abaixo para garantir sua cópia com desconto especial!
+    <iframe src="video.mp4"></iframe>
+
+    <h2>O que você vai encontrar no livro</h2>
+    <ul class="beneficios">
+      <li>✔️ Uma introdução acolhedora sobre como lidar com a ansiedade sem culpa.</li>
+      <li>✔️ Ferramentas práticas para gerenciar crises e reconhecer gatilhos.</li>
+      <li>✔️ Capítulos curtos e linguagem acessível para aplicação imediata.</li>
+      <li>✔️ Reflexões sobre autoestima, autocompaixão e libertação da culpa.</li>
+      <li>✔️ Uma abordagem realista e humanizada para seguir com mais equilíbrio e confiança.</li>
+    </ul>
+
+    <div class="urgencia">
+      ⚠️ Oferta válida apenas enquanto durar o estoque!
+    </div>
+
+    <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar">Quero garantir minha cópia!</a>
+
+    <h2>O que dizem sobre o livro</h2>
+    <ul class="depoimentos">
+      <li>“A leitura foi um abraço em forma de palavras. Me senti compreendida.” — Camila Ribeiro, Niterói/RJ</li>
+      <li>“Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso.” — Jéssica Moura, SG/RJ</li>
+      <li>“O livro mudou minha forma de ver a ansiedade. Leve e profundo.” — Marcos Oliveira, Itaipu/RJ</li>
+    </ul>
+
+    <div class="selos">
+      <div class="selo">
+        <img src="selo-garantia.png" alt="Garantia 7 Dias">
+        <div>7 Dias de Garantia</div>
+      </div>
+      <div class="selo">
+        <img src="selo-pagamento.png" alt="Pagamento Seguro">
+        <div>Pagamento Seguro</div>
+      </div>
+      <div class="selo">
+        <img src="selo-acesso.png" alt="Acesso Imediato">
+        <div>Acesso Imediato</div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados.
+    </footer>
   </div>
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="#comprar" class="botao-comprar" style="animation: piscar 1.5s infinite;">👉 Clique para Comprar</a>
-  </div>
-  <img src="mockup.png" alt="Capa do livro Ansiedade Sem Culpa" class="mockup">
-</section>
 
-<section id="beneficios" style="animation: fadeIn 1s ease-in-out;">
-  <h2>O que você vai encontrar no livro</h2>
-  <ul>
-    <li>Uma introdução acolhedora sobre como lidar com a ansiedade sem culpa, entendendo que sentir é humano e tudo bem não estar bem o tempo todo.</li>
-    <li>Ferramentas práticas e acessíveis para gerenciar crises, reconhecer gatilhos e construir uma rotina emocionalmente mais leve.</li>
-    <li>Capítulos curtos, com linguagem simples, que ajudam a aplicar estratégias no seu dia a dia — mesmo que você nunca tenha lido nada sobre o assunto antes.</li>
-    <li>Reflexões profundas sobre autoestima, autocompaixão e como se libertar do peso da culpa e da autocrítica.</li>
-    <li>Uma abordagem realista e humanizada para você aprender a se acolher, respirar fundo e seguir com mais equilíbrio, clareza e confiança.</li>
-  </ul>
-</section>
-</section>
-
-  <section id="depoimentos" style="animation: fadeIn 1s ease-in-out;">
-  <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:#2e7d32;">O que dizem sobre o livro</h2>
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center; max-width: 1000px; margin: auto;">
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"A leitura foi um abraço em forma de palavras."</strong></p>
-      <p>Consegui entender minha ansiedade de um jeito que ninguém nunca explicou. Hoje me sinto mais calma e com mais esperança.</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=45" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Camila Ribeiro</strong><br>
-          Estudante - Niterói/RJ
-        </div>
-      </div>
-    </div>
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"Me identifiquei em cada capítulo."</strong></p>
-      <p>Antes eu achava que era só comigo. Agora sei que não estou sozinha e tenho ferramentas reais pra lidar com tudo isso.</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=47" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Jéssica Moura</strong><br>
-          Técnica de Enfermagem - São Gonçalo/RJ
-        </div>
-      </div>
-    </div>
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"Leve, direto e transformador."</strong></p>
-      <p>O livro me ajudou a entender e acalmar minha mente em momentos que eu mais precisava. Recomendo pra todo mundo!</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=13" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Marcos Oliveira</strong><br>
-          Motorista de App - Itaipu/RJ
-        </div>
-      </div>
-    </div>
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"Simplesmente me libertou da culpa de sentir."</strong></p>
-      <p>Com o livro percebi que não sou minha ansiedade. Hoje consigo lidar com meus dias difíceis com mais gentileza.</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=20" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Rita Soares</strong><br>
-          Professora - Salvador/BA
-        </div>
-      </div>
-    </div>
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"Um guia leve, mas impactante."</strong></p>
-      <p>Me surpreendi com a clareza e praticidade do conteúdo. Em poucos dias já me senti diferente.</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=11" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Lucas Mendes</strong><br>
-          Empreendedor - Belo Horizonte/MG
-        </div>
-      </div>
-    </div>
-    <div style="background: #f0f0f0; padding: 20px; border-radius: 12px; width: 100%; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <p><strong>"Foi como ter um terapeuta nas mãos."</strong></p>
-      <p>Com esse livro percebi que posso me cuidar mesmo sem ter acesso a terapia ainda. Me sinto mais segura agora.</p>
-      <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
-        <img src="https://i.pravatar.cc/50?img=32" alt="" style="border-radius: 50%;">
-        <div>
-          <strong>Fernanda Lima</strong><br>
-          Estudante - Porto Alegre/RS
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-  <section id="comprar">
-  <div style="background-color: #ff5252; color: white; text-align: center; padding: 12px; font-size: 20px; font-weight: bold; animation: piscar 1s infinite; border-radius: 8px; margin-bottom: 20px;">
-    ⚠️ Oferta por tempo limitado. Garanta já o seu antes que acabe!
-  </div>
-  <div class="contador" id="contador">15:00</div>
-    <h2>Adquira o seu exemplar</h2>
-<p style="font-size: 22px; color: #2e7d32; font-weight: bold;">De <del>R$ 67,00</del> por apenas <span style="color: #d32f2f; font-size: 26px;">R$ 29,90</span></p>
-<p style="font-size: 16px; color: #444;">Aproveite enquanto a oferta está ativa!</p>
-    <div style="text-align: center; margin-top: 30px;">
-  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar">Comprar Agora</a>
-</div>
-  
-  <div style="background-color: #fff4e8; color: #333; padding: 40px 20px; border-radius: 12px; margin-top: 40px; text-align: center;">
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 900px; margin: auto;">
-      <div style="max-width: 250px; margin: 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Garantia" width="50">
-        <h3 style="color: #2e7d32;">7 Dias de Garantia</h3>
-        <p>Você poderá pedir a devolução de 100% do seu dinheiro dentro deste prazo.</p>
-      </div>
-      <div style="max-width: 250px; margin: 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Pagamento Seguro" width="50">
-        <h3 style="color: #2e7d32;">Pagamento Seguro</h3>
-        <p>Ambiente seguro. Seus dados estão protegidos e sua compra é 100% segura.</p>
-      </div>
-      <div style="max-width: 250px; margin: 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Acesso Imediato" width="50">
-        <h3 style="color: #2e7d32;">Acesso Imediato</h3>
-        <p>Seu login e senha serão enviados ao seu e-mail logo após o processamento do pagamento.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="contato">
-    <h2>Fale com a gente</h2>
-    <form action="https://formspree.io/f/myzezjvr" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados</p>
-  </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let tempo = 15 * 60;
-    function atualizarContador() {
-      const minutos = Math.floor(tempo / 60);
-      const segundos = tempo % 60;
-      const formatado = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
-      document.getElementById("contador").textContent = formatado;
-      if (tempo > 0) {
-        tempo--;
-        setTimeout(atualizarContador, 1000);
-      }
-    }
-    atualizarContador();
-  });
-  const video = document.getElementById('vsl-video');
-  document.body.addEventListener('click', function enableAudio() {
-    if (video.muted) {
-      video.muted = false;
-      video.play();
-      document.body.removeEventListener('click', enableAudio);
-    }
-  });
-</script>
-<style>
-  @media (max-width: 768px) {
-    .botao-flutuante {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #388e3c;
-      color: white;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 9999;
-      animation: piscar 1.2s infinite;
-      text-decoration: none;
-    }
-  }
-</style>
-<a href="#comprar" class="botao-flutuante">Comprar Agora</a>
+  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-flutuante">Comprar Agora</a>
 </body>
 </html>
