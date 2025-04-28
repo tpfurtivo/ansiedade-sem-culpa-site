@@ -26,6 +26,16 @@
       color: #666;
       margin-bottom: 30px;
     }
+    .alerta-compra {
+      background-color: #ff9800;
+      color: #fff;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 30px 0;
+      animation: piscar 1.5s infinite;
+    }
     .mockup {
       width: 300px;
       margin: 20px auto;
@@ -87,99 +97,87 @@
       0%, 100% {opacity: 1;}
       50% {opacity: 0.5;}
     }
-    @media (max-width: 768px) {
-      .botao-flutuante {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #388e3c;
-        color: white;
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 50px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        z-index: 9999;
-        animation: piscar 1.2s infinite;
-        text-decoration: none;
-      }
+    .botao-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #388e3c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
+      animation: piscar 1.2s infinite;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
-    <h1>Você não está sozinho</h1>
-    <p class="subtitle">Transforme sua relação com a ansiedade começando hoje.</p>
-    <video id="vsl-video" src="video.mp4" muted autoplay playsinline controls style="width:100%; border-radius: 12px; margin-bottom:30px;"></video>
+<div class="container">
 
-    <div id="contador"></div>
+  <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
 
-    <h2>O que você vai encontrar no livro</h2>
-    <ul class="beneficios">
-      <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade.</li>
-      <li>✔️ Técnicas simples para usar no dia a dia.</li>
-      <li>✔️ Resgate da autoestima e autocompaixão.</li>
-      <li>✔️ Libertação da culpa e compreensão emocional.</li>
-    </ul>
+  <h1>Você não está sozinho</h1>
+  <p class="subtitle">Transforme sua relação com a ansiedade começando hoje.</p>
 
-    <h2>O que dizem sobre o livro</h2>
-    <div class="depoimentos-grid">
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Camila Ribeiro">
-        <h3>Camila Ribeiro</h3>
-        <p>Niterói/RJ</p>
-        <p>"A leitura foi um abraço em forma de palavras. Me senti compreendida."</p>
-      </div>
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jéssica Moura">
-        <h3>Jéssica Moura</h3>
-        <p>São Gonçalo/RJ</p>
-        <p>"Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso."</p>
-      </div>
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marcos Oliveira">
-        <h3>Marcos Oliveira</h3>
-        <p>Itaipu/RJ</p>
-        <p>"O livro mudou minha forma de ver a ansiedade. Leve e profundo."</p>
-      </div>
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Pedro Almeida">
-        <h3>Pedro Almeida</h3>
-        <p>Petrópolis/RJ</p>
-        <p>"Entendi que não preciso carregar o mundo nas costas. Transformador!"</p>
-      </div>
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Larissa Souza">
-        <h3>Larissa Souza</h3>
-        <p>Teresópolis/RJ</p>
-        <p>"Me ajudou a entender que sentir medo é normal e que há solução."</p>
-      </div>
-      <div class="card-depoimento">
-        <img src="https://randomuser.me/api/portraits/men/49.jpg" alt="Rafael Martins">
-        <h3>Rafael Martins</h3>
-        <p>Cabo Frio/RJ</p>
-        <p>"Hoje sou mais leve comigo mesmo. Esse livro abriu meus olhos!"</p>
-      </div>
-    </div>
+  <video id="vsl-video" src="video.mp4" muted autoplay playsinline controls style="width:100%; border-radius: 12px; margin-bottom:30px;"></video>
 
-    <h2>Oferta Especial!</h2>
-    <p><strong>De R$ 67,00</strong> por apenas <strong>R$ 29,90</strong></p>
-    <p>✔️ 7 Dias de Garantia<br>✔️ Pagamento 100% Seguro<br>✔️ Acesso Imediato após a confirmação</p>
-
-    <div class="selos">
-      <img src="https://i.imgur.com/dt8A6a5.png" alt="Garantia">
-      <img src="https://i.imgur.com/YG7iFNo.png" alt="Pagamento Seguro">
-      <img src="https://i.imgur.com/LUwH9VB.png" alt="Acesso Imediato">
-    </div>
-
-    <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar" id="comprar">Quero garantir minha cópia!</a>
+  <div class="alerta-compra">
+    ⚡ Clique abaixo e garanta sua cópia especial!
   </div>
 
-  <a href="#comprar" class="botao-flutuante">Comprar Agora</a>
+  <div id="contador"></div>
 
-  <footer>
-    <p>&copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados</p>
-  </footer>
+  <h2>O que você vai encontrar no livro</h2>
+  <ul class="beneficios">
+    <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade.</li>
+    <li>✔️ Técnicas simples para usar no dia a dia.</li>
+    <li>✔️ Resgate da autoestima e autocompaixão.</li>
+    <li>✔️ Libertação da culpa e compreensão emocional.</li>
+  </ul>
+
+  <h2>O que dizem sobre o livro</h2>
+  <div class="depoimentos-grid">
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Camila Ribeiro">
+      <h3>Camila Ribeiro</h3>
+      <p>Niterói/RJ</p>
+      <p>"A leitura foi um abraço em forma de palavras. Me senti compreendida."</p>
+    </div>
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jéssica Moura">
+      <h3>Jéssica Moura</h3>
+      <p>São Gonçalo/RJ</p>
+      <p>"Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso."</p>
+    </div>
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marcos Oliveira">
+      <h3>Marcos Oliveira</h3>
+      <p>Itaipu/RJ</p>
+      <p>"O livro mudou minha forma de ver a ansiedade. Leve e profundo."</p>
+    </div>
+  </div>
+
+  <h2>Oferta Especial!</h2>
+  <p><strong>De R$ 67,00</strong> por apenas <strong>R$ 29,90</strong></p>
+  <p>✔️ 7 Dias de Garantia<br>✔️ Pagamento 100% Seguro<br>✔️ Acesso Imediato após a confirmação</p>
+
+  <div class="selos">
+    <img src="https://i.imgur.com/dt8A6a5.png" alt="Garantia">
+    <img src="https://i.imgur.com/YG7iFNo.png" alt="Pagamento Seguro">
+    <img src="https://i.imgur.com/LUwH9VB.png" alt="Acesso Imediato">
+  </div>
+
+  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar" id="comprar">Quero garantir minha cópia!</a>
+
+</div>
+
+<a href="#comprar" class="botao-flutuante">Comprar Agora</a>
+
+<footer>
+  <p>&copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados</p>
+</footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -206,5 +204,6 @@
     }
   });
 </script>
+
 </body>
 </html>
