@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansiedade Sem Culpa</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,14 +32,22 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .beneficios, .depoimentos-grid {
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .beneficios, .depoimentos-grid, .selos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       margin-top: 30px;
     }
-    .beneficios li {
+    .beneficios li, .card-depoimento {
       list-style: none;
       background: white;
       padding: 15px;
@@ -48,26 +55,11 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       width: 300px;
     }
-    .card-depoimento {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
     .card-depoimento img {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       margin-bottom: 10px;
-    }
-    .card-depoimento h3 {
-      margin: 10px 0 5px;
-    }
-    .card-depoimento .cidade {
-      font-size: 14px;
-      color: #777;
     }
     .botao-comprar {
       background-color: #2e7d32;
@@ -77,8 +69,7 @@
       border-radius: 8px;
       text-decoration: none;
       display: inline-block;
-      margin: 30px auto 0;
-      animation: piscar 1.5s infinite;
+      margin: 30px 0;
     }
     .botao-flutuante {
       position: fixed;
@@ -91,36 +82,18 @@
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      animation: piscar 1.5s infinite;
       z-index: 999;
+      animation: piscar 1.5s infinite;
     }
     @keyframes piscar {
       0%, 100% {opacity: 1;}
       50% {opacity: 0.5;}
     }
-    .selos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-    .selo img {
-      width: 60px;
-      height: 60px;
-    }
     footer {
       margin-top: 50px;
       font-size: 14px;
       color: #777;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding-bottom: 40px;
     }
   </style>
 </head>
@@ -133,17 +106,15 @@
 
     <h2>Você não está sozinho</h2>
     <p>Você já tentou esconder sua ansiedade atrás de um sorriso? Já se culpou por não conseguir simplesmente "ficar bem"? O livro "Ansiedade Sem Culpa" vai te mostrar que você não é fraco, e que existe uma saída verdadeira — sem fórmulas mágicas, mas com clareza, acolhimento e transformação real.</p>
-    <p>Com uma linguagem acessível e um passo a passo prático, você vai aprender a reconhecer seus gatilhos, lidar com crises e recuperar a leveza da sua rotina. Ao terminar a leitura, você vai se sentir mais confiante, calmo e no controle. A oportunidade de viver com mais paz começa aqui.</p>
 
     <iframe src="video.mp4"></iframe>
 
     <h2>O que você vai encontrar no livro</h2>
     <ul class="beneficios">
-      <li>✔️ Uma introdução acolhedora sobre como lidar com a ansiedade sem culpa.</li>
-      <li>✔️ Ferramentas práticas para gerenciar crises e reconhecer gatilhos.</li>
-      <li>✔️ Capítulos curtos e linguagem acessível para aplicação imediata.</li>
-      <li>✔️ Reflexões sobre autoestima, autocompaixão e libertação da culpa.</li>
-      <li>✔️ Uma abordagem realista e humanizada para seguir com mais equilíbrio e confiança.</li>
+      <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade.</li>
+      <li>✔️ Técnicas simples para usar no dia a dia.</li>
+      <li>✔️ Resgate da autoestima e autocompaixão.</li>
+      <li>✔️ Libertação da culpa e compreensão emocional.</li>
     </ul>
 
     <h2>O que dizem sobre o livro</h2>
@@ -166,6 +137,9 @@
         <p class="cidade">Itaipu/RJ</p>
         <p>“O livro mudou minha forma de ver a ansiedade. Leve e profundo.”</p>
       </div>
+    </div>
+
+    <div class="depoimentos-grid">
       <div class="card-depoimento">
         <img src="https://i.imgur.com/8Km9tLL.png" alt="Pedro Almeida">
         <h3>Pedro Almeida</h3>
@@ -186,6 +160,9 @@
       </div>
     </div>
 
+    <h2>Oferta Especial!</h2>
+    <p><strong>De R$ 67,00</strong> por apenas <strong>R$ 29,90</strong></p>
+
     <div class="selos">
       <div class="selo">
         <img src="https://i.imgur.com/dt8A6a5.png" alt="Garantia 7 Dias">
@@ -201,7 +178,7 @@
     <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar">Quero garantir minha cópia!</a>
   </div>
 
-  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-flutuante"><i class="fas fa-shopping-cart"></i> Comprar Agora</a>
+  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-flutuante">Comprar Agora</a>
 
   <footer>
     &copy; 2025 Ansiedade Sem Culpa - Todos os direitos reservados.
