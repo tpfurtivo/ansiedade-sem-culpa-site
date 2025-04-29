@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansiedade Sem Culpa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f0f8f5;
       margin: 0;
       padding: 0;
@@ -19,24 +18,13 @@
       max-width: 1200px;
       margin: auto;
     }
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #2e7d32;
-      margin-bottom: 20px;
-    }
-    h2 {
+    h1, h2 {
       color: #2e7d32;
     }
     p.subtitle {
-      font-family: 'Poppins', sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      color: #555;
-      line-height: 1.5;
-      max-width: 800px;
-      margin: 0 auto 40px;
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
     }
     .alerta-compra {
       background-color: #ff9800;
@@ -136,12 +124,66 @@
 <body>
 <div class="container">
 
-  <h1>Transforme sua vida. Liberte-se da ansiedade sem culpa.</h1>
-  <p class="subtitle">Descubra um método acolhedor, simples e verdadeiro para reconquistar sua paz interior — mesmo se você já tentou de tudo antes.</p>
+  <h1>Não é só ansiedade. É sua vida esperando para mudar.</h1>
+  <p class="subtitle">Conheça um caminho acolhedor e sem culpas para transformar sua rotina e resgatar sua calma interior.</p>
 
   <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
 
-  <!-- resto do conteúdo permanece -->
+  <h2>Você não está sozinho</h2>
+  <p class="subtitle">
+    Transforme sua relação com a ansiedade começando hoje.<br>
+    Não importa quantas vezes você tenha tentado antes, ou quantas vezes tenha sentido que falhou.<br>
+    Existe um passo simples e realista que pode mudar sua história – e ele está ao seu alcance agora.
+  </p>
+
+  <video id="vsl-video" src="video.mp4" muted autoplay playsinline controls></video>
+
+  <div class="alerta-compra" onclick="document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });">
+    ⚡ Clique abaixo e garanta sua cópia especial!
+  </div>
+
+  <h2>O que você vai encontrar no livro</h2>
+  <ul class="beneficios">
+    <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade.</li>
+    <li>✔️ Técnicas simples para usar no dia a dia.</li>
+    <li>✔️ Resgate da autoestima e autocompaixão.</li>
+    <li>✔️ Libertação da culpa e compreensão emocional.</li>
+  </ul>
+
+  <h2>O que dizem sobre o livro</h2>
+  <div class="depoimentos-grid">
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Camila Ribeiro">
+      <h3>Camila Ribeiro</h3>
+      <p>Niterói/RJ</p>
+      <p>"A leitura foi um abraço em forma de palavras. Me senti compreendida."</p>
+    </div>
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jéssica Moura">
+      <h3>Jéssica Moura</h3>
+      <p>São Gonçalo/RJ</p>
+      <p>"Me identifiquei em cada capítulo. Agora sei que posso lidar com tudo isso."</p>
+    </div>
+    <div class="card-depoimento">
+      <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Marcos Oliveira">
+      <h3>Marcos Oliveira</h3>
+      <p>Itaipu/RJ</p>
+      <p>"O livro mudou minha forma de ver a ansiedade. Leve e profundo."</p>
+    </div>
+  </div>
+
+  <h2 style="color: #d32f2f;">Oferta Especial!</h2>
+  <p><strong style="color:green;">De R$ 67,00</strong> por apenas <strong style="color:red;">R$ 29,90</strong></p>
+
+  <p style="font-weight: bold; margin-bottom:20px;">✔️ 7 Dias de Garantia | ✔️ Pagamento Seguro | ✔️ Acesso Imediato</p>
+
+  <div class="selos">
+    <img src="https://i.imgur.com/cIR0bhi.png" alt="Selo Garantia">
+    <img src="https://i.imgur.com/Zv9uwvZ.png" alt="Selo Pagamento Seguro">
+    <img src="https://i.imgur.com/FSF2CWV.png" alt="Selo Acesso Imediato">
+  </div>
+
+  <a href="https://pay.kiwify.com.br/mP2Hdvd" class="botao-comprar" id="comprar">Quero garantir minha cópia!</a>
 
 </div>
 
