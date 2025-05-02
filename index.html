@@ -101,16 +101,9 @@
       padding-bottom: 40px;
     }
     #contador {
-  font-size: 32px;
+  color: white;
+  font-size: 28px;
   font-weight: bold;
-  background-color: #fff3cd;
-  border: 2px solid #ffeeba;
-  border-radius: 12px;
-  padding: 15px 25px;
-  color: #d32f2f;
-  display: inline-block;
-  margin: 30px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
     @keyframes piscar {
       0%, 100% {opacity: 1;}
@@ -140,12 +133,12 @@
 
   <img src="mockup.png" alt="Capa do Livro Ansiedade Sem Culpa" class="mockup">
 
-  <div class="alerta-compra" onclick="document.getElementById('comprar').scrollIntoView({ behavior: 'smooth' });">
-    ⚡ Clique abaixo e garanta sua cópia especial!
-  </div>
+  <div style="background-color: #d32f2f; color: white; font-size: 28px; padding: 15px; border-radius: 8px; margin: 20px 0; font-weight: bold;">
+  ⏳ Oferta termina em: <span id="contador">00:00</span>
+</div>
+
 
-  <div id="contador"></div>
-<p style="font-weight: bold; color: #555;">Tempo restante para aproveitar a oferta especial</p>
+  
 <h2>O que você vai encontrar no livro</h2>
   <ul class="beneficios">
     <li>✔️ Soluções naturais e acessíveis para lidar com a ansiedade</li>
